@@ -53,7 +53,7 @@ const ProcessOrder = () => {
       notifySuccess("Order Updated Successfully");
       dispatch({ type: UPDATE_ORDER_RESET });
     }
-console.log(id);
+
     dispatch(getOrderDetails(id));
   }, [dispatch, error, id, isUpdated, updateError]);
 
