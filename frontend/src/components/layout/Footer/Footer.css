@@ -1,0 +1,92 @@
+footer{
+    margin-top: 10vmax;
+    padding: 2vmax;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Align items evenly across the footer */
+    align-items: center;
+}
+
+.leftFooter{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.leftFooter > h4{
+    font-size: 1.2vmax;
+    font-family: "Franklin Gothic Medium","Arial Narrow, Arial, sans-serif";
+}
+.leftFooter > p{
+    font-size: 1.3vmax;
+    align-items: centre;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grand",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.leftFooter > img{
+    width: 10vmax;
+    /* height: 5vmax; */
+    margin: 1vmax;
+    cursor: pointer;
+    
+}
+
+.midFooter{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+    text-align: center;
+}
+.midFooter > h1{
+    font-size: 3vmax;
+    font-family: "Roboto";
+    color: white
+}
+.midFooter > p {
+    max-width: 60%;
+    margin: 1vmax auto;
+}
+.midFooter > img {
+    width: 100px;
+    height: 100px;
+}
+
+.rightFooter{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.rightFooter > h4 {
+    font-family: "Franklin Gothic Medium","Arial Narrow", Arial, "sans-serif";  
+    font-size: 1.5vmax;
+    text-decoration: underline;
+    margin-bottom: 1vmax;
+}
+.rightFooter > a {
+    margin: 0.5vmax;
+    text-decoration: none;
+    font-size: 1.3vmax;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    color: white;
+    transition: all 0.5s;
+}
+.rightFooter > a:hover {
+    color: #000000;
+}
+
+@media screen and (max-width: 520px){
+    .footer {
+        flex-direction: column; /* Stack footer sections vertically on small screens */
+        align-items: center;
+        text-align: center;
+    }
+
+    .leftFooter,
+    .midFooter,
+    .rightFooter {
+        width: 100%; /* Make each footer section take up full width on small screens */
+        margin-bottom: 20px; /* Add spacing between footer sections */
+    }
+}
