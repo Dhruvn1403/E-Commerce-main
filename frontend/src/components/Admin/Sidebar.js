@@ -10,7 +10,7 @@ import ImportExportIcon from "@material-ui/icons/ImportExport";
 import ListAltIcon from "@material-ui/icons/ListAlt";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import PeopleIcon from "@material-ui/icons/People";
-import RateReviewIcon from "@material-ui/icons/RateReview";
+// import RateReviewIcon from "@material-ui/icons/RateReview";
 
 const Sidebar = () => {
   return (
@@ -50,12 +50,12 @@ const Sidebar = () => {
           <PeopleIcon /> Users
         </p>
       </Link>
-      <Link to="/admin/reviews">
+      {/* <Link to="/admin/reviews">
         <p>
           <RateReviewIcon />
           Reviews
         </p>
-      </Link>
+      </Link> */}
     </div>
   );
 };

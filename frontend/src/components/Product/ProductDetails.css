@@ -215,6 +215,7 @@
     margin: 1vmax 42%;
     /* margin-top: 1vmax; */
   }
+  
 .submitReview:hover {
     background-color: darkgreen;
     transform: scale(1.1);

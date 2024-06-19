@@ -76,7 +76,7 @@ function App() {
       <Header isAuthenticated={isAuthenticated} user={user}/>
       <Routes>
         <Route exact path="/" element={<Home/>}/>
-        <Route exact path="/product/:id" element={<ProductDetails/>}/>
+        <Route exact path="/product/:id" element={<ProductDetails isAuthenticated={isAuthenticated} />}/>
         <Route exact path="/products" element={<Products/>}/>
         <Route path="/products/:keyword" element={<Products/>}/>
         <Route exact path="/search" element={<Search />}/>

@@ -20,7 +20,7 @@ import ReviewCard from './ReviewCard';
 import Helmet from '../layout/MetaData';
 import { NEW_REVIEW_RESET } from '../../constants/productConstants';
 
-const ProductDetails = () => {
+const ProductDetails = ( {isAuthenticated} ) => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const notifyError = (message) => toast.error(message);
@@ -74,14 +74,21 @@ const ProductDetails = () => {
   }
 
   const addToCartHandler = () => {
-    dispatch(addItemsToCart(id, quantity));
-    const toastId = notifySuccess("Item Added To Cart");
-    setTimeout(() => {
-      toast.dismiss(toastId);
-    }, 1500);
+    if(!isAuthenticated)
+      notifyError("Please logIn to add a product to cart");
+    else {
+      dispatch(addItemsToCart(id, quantity));
+      const toastId = notifySuccess("Item Added To Cart");
+      setTimeout(() => {
+        toast.dismiss(toastId);
+      }, 1500);
+    }
   };
 
   const submitReviewToggle = () => {
+    if(!isAuthenticated)
+    notifyError("Please logIn to review");
+    else
     setOpen(!open);
   };
 
@@ -197,7 +204,7 @@ const ProductDetails = () => {
                 Description : <p>{product.description}</p>
               </div>
 
-              <button  className="submitReview" onClick={submitReviewToggle}>
+              <button  className="submitReview" onClick={submitReviewToggle} >
                 Review Product
               </button>
 
